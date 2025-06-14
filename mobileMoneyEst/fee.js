@@ -1,5 +1,5 @@
 function estimateTransactionFee(amountToSend) {
-  const feeRate = 0.015; // 1.5%
+  const feeRate = 1.5%;
   const minFee = 10;
   const maxFee = 70;
 

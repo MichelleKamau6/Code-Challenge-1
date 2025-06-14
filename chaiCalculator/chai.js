@@ -1,13 +1,13 @@
 function calculateChaiIngredients(numberOfCups) {
-  const waterPerCup = 200; // ml
-  const milkPerCup = 50;   // ml
-  const teaLeavesPerCup = 1; // tablespoon
-  const sugarPerCup = 2;   // teaspoons
+  const waterCup = 200; 
+  const milkCup = 50;  
+  const teaLeavesCup = 1; 
+  const sugarCup = 2; 
 
-  const totalWater = waterPerCup * numberOfCups;
-  const totalMilk = milkPerCup * numberOfCups;
-  const totalTea = teaLeavesPerCup * numberOfCups;
-  const totalSugar = sugarPerCup * numberOfCups;
+  const totalWater = waterCup * numberOfCups;
+  const totalMilk = milkCup * numberOfCups;
+  const totalTea = teaLeavesCup * numberOfCups;
+  const totalSugar = sugarCup * numberOfCups;
 
   console.log(`To make ${numberOfCups} cup(s) of Kenyan Chai, you will need:`);
   console.log(`Water: ${totalWater} ml`);
@@ -18,9 +18,10 @@ function calculateChaiIngredients(numberOfCups) {
 }
 
 const input = prompt("Karibu! How many cups of Chai Bora would you like to make?");
-const cups = Number(input);
-if (!isNaN(cups) && cups > 0) {
-  calculateChaiIngredients(cups);
+const numberOfCups = parseInt(input);
+
+if (!isNaN(numberOfCups) && numberOfCups > 0) {
+  calculateChaiIngredients(numberOfCups);
 } else {
   console.log("Please enter a valid number of cups.");
 }
